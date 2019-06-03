@@ -143,7 +143,7 @@ html,body {
   text-align: center;
   color: #F6F6F6;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   left: 86%;
   top: 10px;
 }
@@ -155,15 +155,53 @@ html,body {
 
 @media screen and (max-width: 767px) {
     /* Menu icon */
-    .menu {
-      display: none;
-    }
-    .icon-menu {
+  .header {
+    height: 80px;
+  }
+
+  .header nav {
+    height: inherit;
+  } 
+
+  .header ol {
+    display: initial;
+  }
+
+  .header ol li {
+    height: 80px;
+    text-align: center;
+  }
+
+  .header a {
+    justify-content: center;
+  }
+
+  .menu {
+    height: auto;
+    position: fixed;
+    background: rgba(12, 159, 249, .9);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 100vw;  
+    transition: .3s;
+  }
+
+  .menu.is-active {
+    left: 0;
+  }
+
+  .icon-menu {
       display: block;
-    }
-    .header nav{
+  }
+
+  .header nav{
       justify-content: center;
-    }
+  }
 }
 
 @media screen and (max-width: 480px) {
