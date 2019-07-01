@@ -223,7 +223,6 @@ img {
 
 /* Media queries */
 
-
 @media screen and (max-width: 947px) {
 
   .project-image {
@@ -231,7 +230,7 @@ img {
     height: 191.25px;
   }
   .portfolio {
-    height: 53.5rem;
+    height: 52.25rem;
   }
 
 }
@@ -242,14 +241,15 @@ img {
     width: 281.25px;
     height: 168.75px;
   }
+
   .portfolio {
-    height: 49.5rem;
+    height: 48rem;
   }
 
 }
 
 @media screen and (max-width: 767px) {
-    /* Menu icon */
+
   .header {
     height: 5rem;
   }
