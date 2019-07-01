@@ -57,35 +57,37 @@
 
 
 html,body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    
-}
-.header {
-    background-color:#373737;
-    height: 6rem; 
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-style: solid;
-    
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
-.header nav {
-    height: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+strong {
+  color: #0C9FF9;
+}
+
+/* Header section */
+
+.header {
+  background-color:#373737;
+  height: 6rem; 
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .container {
   height: inherit;
-  max-width: 64rem;
   width: 100%;
-  margin: 0 auto;
-  display: inherit;
-  
+  max-width: 64rem;
+  margin: auto;
+}
+
+.header nav {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -94,22 +96,33 @@ html,body {
   font-weight: bold;
   font-style: italic;
   display: inherit;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.logo a {
+  color: #F6F6F6;
+}
+
+.logo a:hover {
+  color: #0C9FF9;
 }
 
 .menu {
   height: inherit;
+  display: inherit;
 }
 
 .burger-button {
-  font-size: 1.5rem;
-  width: 3.5rem;
   height: 3.5rem;
-  border-radius: 1.75rem;
+  width: 3.5rem;
+  color: #F6F6F6;
   background-color: rgba(0, 0, 0, .5);
+  font-size: 1.5rem;
+  border-radius: 1.75rem;
   display: none;
   line-height: 3.5rem;
   text-align: center;
-  color: #F6F6F6;
   position: fixed;
   z-index: 1;
   left: 86%;
@@ -121,29 +134,29 @@ html,body {
 }
 
 .header ol {
-    height: inherit;
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-    text-decoration: none;
-    display: flex;
-    
+  height: inherit;
+  list-style: none;
+  text-decoration: none;
+  display: inherit;
+  margin: 0;
+  padding-left: 0;
 }
 
 .header ol li {
-    height: inherit;
-    padding: 16px;
-    padding-top: 0;
-    padding-bottom: 0;
+  height: inherit;
+  padding: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inherit;
 }
 
 .header a {
-    height: inherit;
-    color: #E4E2E2; 
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+  height: inherit;
+  color: #E4E2E2; 
+  font-weight: 600;
+  text-decoration: none;
+  display: inherit;
+  align-items: center;
 }
 
 
@@ -151,36 +164,30 @@ html,body {
   color:  #FFFFFF;
 }
 
-.logo a {
-  color: #F6F6F6;
-}
+/* Hero section */
 
-.logo a:hover {
-  color: #0C9FF9;
-}
-
-.home {
-  height: 40rem;
+.hero {
+  height: 34rem;
   background: #373737;
   text-align: center;
 }
  
 figure {
-  padding-left: 4rem;
-  padding-right: 4rem;
   margin: 0;
-  padding-top: 4rem;
+  padding: 0;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-right: 3rem;
 } 
 
 img {
-  box-shadow: 6px 6px 6px #373737;
+  box-shadow: 4px 4px 4px #000000;
 }
 
 .avatar {
-  width: 16rem;
   height: 16rem;
+  width: 16rem;
   border-radius: 8rem;
-  
 }
 
 .intro {
@@ -188,34 +195,58 @@ img {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 2.5rem;
-  padding-top: 1em;
+  margin: 0;
+  padding-top: 2.5rem;
 }
 
 .portfolio {
-  height: 58rem;
+  height: 58.5rem;
   background: #E4E2E2;
   border-style: solid;
 }
 
-.container-plus {
+.image-container {
+  height: 2rem;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.first-imageSpace {
+  padding-top: 6rem;
 }
 
 .project-image {
-  width: 30vw;
+  height: 225px;
+  width: 375px;
 }
-
-strong {
-  color: #0C9FF9;
-}
-
 
 /* Media queries */
 
-@media screen and (max-width: 1024px) {
-    }
+
+@media screen and (max-width: 947px) {
+
+  .project-image {
+    width: 318.75px;
+    height: 191.25px;
+  }
+  .portfolio {
+    height: 53.5rem;
+  }
+
+}
+
+@media screen and (max-width: 835px) {
+
+  .project-image {
+    width: 281.25px;
+    height: 168.75px;
+  }
+  .portfolio {
+    height: 49.5rem;
+  }
+
+}
 
 @media screen and (max-width: 767px) {
     /* Menu icon */
@@ -264,12 +295,6 @@ strong {
       display: block;
   }
 
-
-  .project-image {
-    width: 300px;
-    height: 200px;
-  }
-
   .avatar {
     width: 14rem;
     height: 14rem;
@@ -285,13 +310,34 @@ strong {
   .portfolio {
     height: 110rem;
   }
+
+  .project-image {
+    width: 375px;
+    height: 225px;
+  }
+
+  .image-container {
+    justify-content: center;
+  }
+
+  .image-second {
+    padding-top: 2rem;
+  }
+  .portfolio {
+    height: 108rem;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
 
+  .hero {
+    height: 30rem;
+  }
+
   .logo {
     font-size: 1.5rem;
-}
+  }
   .burger-button {
     font-size: 1.25rem;
     width: 3rem;
@@ -312,8 +358,19 @@ strong {
     font-size: 1rem;
     line-height: 2rem;
   }
+
+  .project-image {
+    width: 300px;
+    height: 180px;
+  }
+
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
 
+  .project-image {
+    width: 281.25px;
+    height: 168.75px;
+  }
+  
 }
