@@ -67,7 +67,7 @@ strong {
   color: #0C9FF9;
 }
 
-/* Header section */
+/* Header Section */
 
 .header {
   background-color:#373737;
@@ -164,7 +164,7 @@ strong {
   color:  #FFFFFF;
 }
 
-/* Hero section */
+/* Hero Section */
 
 .hero {
   height: 34rem;
@@ -199,13 +199,14 @@ img {
   padding-top: 2.5rem;
 }
 
+/* Portfolio Section */
+
 .portfolio {
   height: 58.5rem;
   background: #E4E2E2;
-  border-style: solid;
 }
 
-.image-container {
+.second-container {
   height: 2rem;
   display: flex;
   justify-content: space-between;
@@ -219,6 +220,44 @@ img {
 .project-image {
   width: 375px;
   height: 225px;
+}
+
+/* About Section */
+
+.about {
+  background-color: #EBE9E9;
+  height: 43.25rem;
+}
+
+.bio-image {
+  width: 375px;
+  height: 500px;
+}
+
+.biography {
+  width: 375px;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  padding-left: 3rem;
+  padding-top: 6rem;
+  padding-right: 3rem;
+}
+  
+h2 {
+  color: #0C9FF9;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2;
+}
+
+h2, h3 {
+  margin: 0;
 }
 
 /* Media queries */
@@ -312,7 +351,7 @@ img {
     height: 225px;
   }
 
-  .image-container {
+  .second-container {
     justify-content: center;
   }
 
