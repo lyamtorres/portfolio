@@ -240,7 +240,6 @@ img {
   margin: 0;
   padding: 0;
   padding-left: 3rem;
-  padding-top: 6rem;
   padding-right: 3rem;
 }
   
@@ -249,6 +248,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: bolder;
   text-align: center;
+  padding-top: 6rem;
   padding-bottom: 2rem;
 }
 
@@ -269,9 +269,6 @@ h2, p {
   height: 41.25rem;
 }
 
-.skill-title {
-  padding-top: 6rem;
-}
 
 .flexbox {
   display: flex;
@@ -307,6 +304,40 @@ h4 {
   list-style: none;
   line-height: 3rem;
   text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.contact {
+  height: 40.25rem;
+  background-color: #EBE9E9; 
+  border: solid;
+}
+
+.contact .box {
+  width: 25vw;
+}
+
+hr {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  width: 20%;
+  height: 3px;
+  background-color: #0C9FF9;
+  font-weight: bolder;
+  border: none;
+}
+
+.social {
+  font-size: 70px;
+  color: black;
+}
+
+.contact a {
+  text-decoration: none;
 }
 
 /* Media queries */
