@@ -246,18 +246,67 @@ img {
   
 h2 {
   color: #0C9FF9;
+  font-size: 1.5rem;
+  font-weight: bolder;
   text-align: center;
   padding-bottom: 2rem;
 }
 
-h3 {
+p {
   font-size: 1rem;
   font-weight: 100;
   line-height: 2;
 }
 
-h2, h3 {
+h2, p {
   margin: 0;
+}
+
+/* Section Skills */
+
+.skill {
+  background-color: #E4E2E2;
+  height: 41.25rem;
+}
+
+.skill-title {
+  padding-top: 6rem;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.box {
+  width: 33.33333333333333vw;
+  height: 500px;
+  text-align: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.skill-icon {
+  box-shadow: none;
+  padding-top: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.skill ol {
+  padding-left: 0;
+}
+
+.skill ol li {
+  font-size: 1rem;
+  text-decoration: none;
+  list-style: none;
+  line-height: 3rem;
+  text-align: center;
 }
 
 /* Media queries */
