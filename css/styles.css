@@ -230,7 +230,7 @@ img {
 .portfolio figure {
   width: 48%;
   height: 325px;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .project-image {
@@ -242,36 +242,43 @@ img {
 
 .about {
   background-color: #EBE9E9;
-  height: 43.25rem;
-  padding-top: 6rem;
+  height: auto;
+  padding: 6rem 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.about .container {
-  height: 2rem;
+.about figure {
+  width: 325px;
+  height: 400px;
+  margin: 1.5rem 0;
+  width: 48%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.bio-image {
+.about img {
+  box-shadow: none;
+}
+
+.profile-picture {
   width: 375px;
-  height: 500px;
+  height: 375px;
+  border-radius: 100%
 }
 
 .biography {
-  width: 375px;
-  height: 500px;
+  width: 48%;
+  height: 375px;
+  margin: 1.5rem 0;
 }
   
 h2 {
   color: #0C9FF9;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bolder;
   text-align: center;
-  padding-top: 6rem;
   padding-bottom: 2rem;
 }
 
@@ -280,6 +287,8 @@ p {
   font-weight: 100;
   line-height: 2;
 }
+
+
 
 /* Section Skills */
 
