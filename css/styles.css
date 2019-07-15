@@ -294,9 +294,9 @@ p {
 
 .skill {
   background-color: #E4E2E2;
-  height: 41.25rem;
+  height: auto;
+  padding: 8rem 0;
 }
-
 
 .flexbox {
   display: flex;
@@ -304,7 +304,7 @@ p {
 
 .box {
   width: 33.33333333333333vw;
-  height: 5rem;
+  height: auto;
   text-align: center;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -318,12 +318,12 @@ p {
 h4 {
   font-size: 1.25rem;
   margin: 0;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 .skill ol {
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .skill ol li {
@@ -332,6 +332,10 @@ h4 {
   list-style: none;
   line-height: 3rem;
   text-align: center;
+}
+
+.skill img {
+  padding: 0;
 }
 
 h3 {
