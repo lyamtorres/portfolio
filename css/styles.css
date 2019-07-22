@@ -84,7 +84,6 @@ h1, h2, h3, h4, h5, h6, p {
   position: fixed;
   transition: top 0.3s;
   opacity: 0.9;
-  box-shadow: 2px 2px 2px #000000;
   
 }
 
@@ -181,15 +180,10 @@ h1, h2, h3, h4, h5, h6, p {
 /* Hero Section */
 
 .hero {
-  height: 40rem;
+  height: 44rem;
   background: #373737;
   display: flex;
   flex-wrap: wrap;
-}
-
-.hero .container {
-  display: flex;
-  align-items: center;
 }
 
 .avatar {
@@ -204,13 +198,15 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 2.5rem;
   font-weight: bold;
   text-align: left;
-  margin-top: 6rem;
+  margin: 2rem 0;
 }
 
 /* Portfolio Section */
 
 figure {
   margin: 0;
+  margin: 2rem 0;
+  width: 48%;
 } 
 
 img {
@@ -228,9 +224,7 @@ img {
 }
 
 .portfolio figure {
-  width: 48%;
   height: 325px;
-  margin: 1.5rem 0;
 }
 
 .project-image {
@@ -250,10 +244,7 @@ img {
 }
 
 .about figure {
-  width: 325px;
   height: 400px;
-  margin: 1.5rem 0;
-  width: 48%;
   display: flex;
   justify-content: center;
 }
@@ -271,7 +262,7 @@ img {
 .biography {
   width: 48%;
   height: 375px;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
   
 h2 {
@@ -279,7 +270,7 @@ h2 {
   font-size: 2rem;
   font-weight: bolder;
   text-align: center;
-  padding-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 p {
@@ -290,24 +281,32 @@ p {
 
 
 
-/* Section Skills */
+/* Skills Section */
 
 .skill {
   background-color: #E4E2E2;
   height: auto;
-  padding: 8rem 0;
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box-sample {
+  width: 100%;
 }
 
 .flexbox {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .box {
-  width: 33.33333333333333vw;
+  width: 33.33333333333333%;
   height: auto;
   text-align: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding: 0 3rem;
 }
 
 .skill-icon {
@@ -324,6 +323,7 @@ h4 {
 .skill ol {
   margin: 0;
   padding: 0;
+  margin-bottom: 1rem;
 }
 
 .skill ol li {
@@ -343,9 +343,15 @@ h3 {
   margin-bottom: 0rem;
 }
 
+/* Contact section */
+
 .contact {
-  height: 40.25rem;
-  background-color: #EBE9E9; 
+  height: auto;
+  padding: 6rem 0;
+  background-color: #EBE9E9;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
 }
 
 .contact .box {
@@ -375,12 +381,8 @@ hr {
 footer {
   background-color: #373737;
   height: 80px;
-}
-
-footer .container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 h6 {
