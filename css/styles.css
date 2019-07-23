@@ -137,10 +137,9 @@ h1, h2, h3, h4, h5, h6, p {
   display: none;
   line-height: 3.5rem;
   text-align: center;
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  left: 86%;
-  top: 0.75rem;
+  right: 2rem;
 }
 
 .burger-button:hover {
@@ -186,12 +185,6 @@ h1, h2, h3, h4, h5, h6, p {
   flex-wrap: wrap;
 }
 
-.avatar {
-  width: 16rem;
-  height: 16rem;
-  border-radius: 8rem;
-}
-
 .intro {
   color: #F6F6F6;
   font-size: 1.5rem;
@@ -205,9 +198,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 figure {
   margin: 0;
-  margin: 2rem 0;
   width: 48%;
 } 
+
+.portfolio figure {
+  margin: 2rem 0;
+}
 
 img {
   box-shadow: 4px 4px 4px #000000;
@@ -247,6 +243,7 @@ img {
   height: 400px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .about img {
@@ -256,13 +253,12 @@ img {
 .profile-picture {
   width: 375px;
   height: 375px;
-  border-radius: 100%
+  border-radius: 100%;
 }
 
 .biography {
   width: 48%;
-  height: 375px;
-  margin: 2rem 0;
+  height: auto;
 }
   
 h2 {
@@ -270,7 +266,7 @@ h2 {
   font-size: 2rem;
   font-weight: bolder;
   text-align: center;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -361,7 +357,7 @@ h3 {
 hr {
   margin-top: 7rem;
   margin-bottom: 7rem;
-  width: 20%;
+  width: 8rem;
   height: 3px;
   background-color: #0C9FF9;
   font-weight: bolder;
@@ -392,27 +388,19 @@ h6 {
 
 /* Media queries */
 
-@media screen and (max-width: 947px) {
+@media screen and (max-width: 1023px) {
+
+  .portfolio figure {
+    height: 250px;
+  }
 
   .project-image {
-    width: 318.75px;
-    height: 191.25px;
-  }
-  .portfolio {
-    height: 52.25rem;
+    height: 250px;
   }
 
-}
-
-@media screen and (max-width: 835px) {
-
-  .project-image {
-    width: 281.25px;
-    height: 168.75px;
-  }
-
-  .portfolio {
-    height: 48rem;
+  .profile-picture {
+    width: 300px;
+    height: 300px;
   }
 
 }
@@ -421,7 +409,7 @@ h6 {
 
   .header nav {
     height: inherit;
-    justify-content: center;
+    justify-content: space-between;
   } 
 
   .header ol {
@@ -435,6 +423,16 @@ h6 {
 
   .header a {
     justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo a {
+    width: 137.75px;
   }
 
   .menu {
@@ -460,104 +458,80 @@ h6 {
       display: block;
   }
 
-  .avatar {
-    width: 14rem;
-    height: 14rem;
-    border-radius: 7rem;
+  figure {
+    width: 98%;
   }
 
-  .intro {
-    font-size: 1.25rem;
-    line-height: 2.25rem;
-    padding-top: 2rem;
-  }
-
-  .portfolio {
-    height: 110rem;
-  }
-
-  .project-image {
-    width: 375px;
-    height: 225px;
-  }
-
-  .second-container {
-    justify-content: center;
-  }
-
-  .first-imageSpace {
-    padding-top: 9rem;
-  }
-
-  .second-imageSpace {
-    padding-top: 2rem;
-  }
-
-  .portfolio {
-    height: 113.5rem;
-  }
-
-}
-
-@media screen and (max-width: 480px) {
-
-  .hero {
-    height: 30rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-
-  }
-  .burger-button {
-    font-size: 1.25rem;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1.5rem;
-    line-height: 3rem;
-    left: 82%;
-    top: 1rem;
-    
-  }
-  .avatar {
-    width: 12rem;
-    height: 12rem;
-    border-radius: 6rem;
-  }
-
-  .intro {
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-
-  .project-image {
-    width: 300px;
-    height: 180px;
-  }
-
-  .first-imageSpace {
-    padding-top: 7.5rem;
-  }
-
-  .second-imageSpace {
-    padding-top: 2rem;
+  .portfolio figure {
+    height: 350px;
   }
   
-  .intro {
-    padding-top: 2.5rem;
-  }
-
-  .portfolio {
-    height: 93.75rem;
-  }
-
-}
-
-@media screen and (max-width: 360px) {
-
   .project-image {
-    width: 281.25px;
-    height: 168.75px;
+    width: 100%;
+    height: 350px;
+  }
+
+  .about figure {
+    height: 350px;
+  }
+
+  .profile-picture {
+    width: 350px;
+    height: 350px;
+  }
+
+  .biography {
+    width: 98%;
+  }
+
+  .flexbox {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
   }
   
+  .box {
+    margin-top: 4rem;
+    width: auto;
+  }
+
+  hr {
+    margin-bottom: 3rem;
+  }
+
+  .contact .box {
+    width: initial;
+  }
+
+  .about figure {
+    margin-top: 4rem;
+  }
+
+  .biography {
+    margin-top: 4rem;
+  }
+
+} 
+
+
+@media screen and (max-width: 479px) {
+
+  .project-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .portfolio figure {
+    height: 250px;
+  }
+
+  .about figure {
+    height: 250px;
+  }
+
+  .profile-picture {
+    width: 250px;
+    height: 250px;
+  }
+
 }
