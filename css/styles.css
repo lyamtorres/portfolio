@@ -212,14 +212,14 @@ hr {
   text-align: left;
 }
 
-/* Portfolio Section */
+/* Projects Section */
 
 figure {
   margin: 0;
   width: 48%;
 } 
 
-.portfolio figure {
+.projects figure {
   margin: 2rem 0;
 }
 
@@ -233,14 +233,14 @@ figure {
   align-items: center;
 }
 
-.portfolio a {
+.projects a {
   color: white;
   font-size: 2rem;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.portfolio {
+.projects {
   padding: 6rem 0;
   height: auto;
   background: #E4E2E2;
@@ -249,7 +249,7 @@ figure {
   flex-wrap: wrap;
 }
 
-.portfolio figure {
+.projects figure {
   height: 20rem;
 }
 
@@ -365,7 +365,7 @@ footer {
 
 @media screen and (max-width: 1023px) {
 
-  .portfolio figure {
+  .projects figure {
     height: 16rem;
   }
 
@@ -435,7 +435,7 @@ footer {
     width: 98%;
   }
 
-  .portfolio figure {
+  .projects figure {
     height: 21.875rem;
   }
   
@@ -493,7 +493,7 @@ footer {
     height: 250px;
   }
 
-  .portfolio figure {
+  .projects figure {
     height: 16rem;
   }
 
