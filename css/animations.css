@@ -1,0 +1,76 @@
+.header {
+  transition: top 0.3s;
+  opacity: 0.9;
+}
+
+.menu {
+  transition: .3s;
+}
+
+.header ol a {
+  color: #D9D9D9; 
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.header ol a:hover {
+  color:  #FFFFFF;
+}
+
+.burger-button:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.logo a {
+  color: #FFFFFF;
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.logo a:hover { 
+  color: #0C9FF9;
+}
+
+.contact a {
+    color: #373737;
+    animation-name: coloration;
+    transition-duration: .5s;
+}
+
+.contact .linkedin:hover {
+    color: #0073B1;
+}
+
+.contact .github:hover {
+    color: #000000;
+}
+
+.contact .instagram:hover {
+    color: #E3304E;
+}
+
+.contact .envelop:hover {
+    color: #4386FA;
+}
+
+.project-selection {
+  animation-name: zoom-effect;
+  transition-duration: .5s;
+}
+
+.project-selection:hover {
+  transform: scale(1.05);
+}
+
+/*
+.intro {
+    position: relative;
+    animation-name: slide-down;
+    animation-duration: 1.5s;
+}
+*/
+
+@keyframes slide-down {
+    0% {top: 25%; opacity: 0;}
+    100%{top: 0; opacity: 100;}
+}

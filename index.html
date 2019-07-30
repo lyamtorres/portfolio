@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
     <title>Lyam Torres</title>
 </head>
 <body>
@@ -17,9 +18,11 @@
                 <div class="logo">
                     <a href="http://127.0.0.1:5500/index.html">Lyam Torres</a>
                 </div>
-                <a href="#"><i class="icon-menu burger-button" id="burger-menu"></i></a>                
+                <a href="javascript:void(0)">
+                    <i class="icon-menu burger-button" id="burger-menu"></i>
+                </a>             
                 <div class="menu">
-                    <ol>
+                    <ol class="menu-selection">
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -42,22 +45,22 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <figure>
-                <img src="/images/project-image.jpeg" class="project-image" alt="">
+                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
             </figure>
             <figure>
-                    <img src="/images/project-image.jpeg" class="project-image" alt="">
+                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
             </figure>
             <figure>
-                    <img src="/images/project-image.jpeg" class="project-image" alt="">
+                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
             </figure>
             <figure>
-                    <img src="/images/project-image.jpeg" class="project-image" alt="">
+                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
             </figure>
             <figure>
-                <img src="/images/project-image.jpeg" class="project-image" alt="">
+                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
             </figure>
             <figure>
-                <img src="/images/project-image.jpeg" class="project-image" alt="">
+                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
             </figure>
         </div>
     </section>
@@ -108,8 +111,8 @@
                     <h4>Back-End</h4>
                     <ol>
                         <li>Java</li>
-                        <li>Node.js</li>
-                        <li>TypeScript</li>
+                        <li>C/C++</li>
+                        <li>MySQL</li>
                     </ol>
                 </div>
                 <div class="box">
@@ -132,25 +135,25 @@
                 <hr>
             <div class= "box-sample"></div>
             <div class="flexbox">
-                <a href="https://www.linkedin.com/in/lyam-torres-967270169/" target="_blank">
+                <a href="https://www.linkedin.com/in/lyam-torres-967270169/" class="linkedin" target="_blank">
                     <div class="box">
                         <i class="icon-linkedin social"></i>
                         <h4>LinkedIn</h4>
                     </div>
                 </a>
-                <a href="https://github.com/lyamtorres" target="_blank">
+                <a href="https://github.com/lyamtorres" class="github" target="_blank">
                     <div class="box">
                         <i class="icon-github social"></i>
                         <h4>Github</h4>
                     </div>
                 </a>
-                <a href="https://www.instagram.com/lyamtorres/" target="_blank">
+                <a href="https://www.instagram.com/lyamtorres/" class="instagram" target="_blank">
                     <div class="box">
                         <i class="icon-instagram social"></i>
                         <h4>Instagram</h4>
                     </div>
                 </a>
-                <a href=mailto:lyamscott@hotmail.com target="_blank">
+                <a href=mailto:lyamscott@hotmail.com class="envelop" target="_blank">
                     <div class="box">
                         <i class="icon-envelop social"></i>
                         <h4>Mail</h4>

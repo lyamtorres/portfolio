@@ -1,5 +1,10 @@
 const menu = document.querySelector('.menu');
 const burgerButton = document.querySelector('#burger-menu');
+const menuOptions = document.querySelector('.menu-selection'); 
+
+function hide() {
+    menu.classList.remove('is-active');
+}
 
 function hideShow() {
     if (menu.classList.contains('is-active')) {
@@ -10,6 +15,7 @@ function hideShow() {
 }
 
 burgerButton.addEventListener('click', hideShow);
+menuOptions.addEventListener('click', hide);
 
 var prevScrollPos = window.pageYOffset;
 window.onscroll = function() {
