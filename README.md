@@ -3,5 +3,5 @@ This is my personal website. The objective behind this project was to create a s
 
 # What I Learned
 * Solid understing of Flexbox
-* Use of Media Queries and Elastic Layouts for Responsive Design
-* Basic of Animations and Transitions
+* Using Media Queries and Elastic Layouts for Responsive Design
+* Basics of Animations and Transitions
