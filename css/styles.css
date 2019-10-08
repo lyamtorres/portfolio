@@ -61,7 +61,7 @@ html,body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
 }
 
 strong {
@@ -226,11 +226,22 @@ figure {
 .project-selection {
   width: 100%;
   height: 20rem;
-  background-image: linear-gradient(to right,#0C9FF9,#007ADE, #0C9FF9);
   border-radius: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.chess-online {
+  background-color: #45ABEF;
+}
+
+.amazon-viewer {
+  background-color: #FF9900;
+}
+
+.coming-soon {
+  background-color: grey;
 }
 
 .projects a {
