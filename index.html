@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Lyam Torres</title>
 </head>
 <body>
@@ -16,16 +17,16 @@
             <nav>
                
                 <div class="logo">
-                    <a href="http://127.0.0.1:5500/index.html">Lyam Torres</a>
+                    <a href="https://lyamtorres.com/">Lyam Torres</a>
                 </div>
                 <a href="javascript:void(0)">
                     <i class="icon-menu burger-button" id="burger-menu"></i>
                 </a>             
                 <div class="menu">
                     <ol class="menu-selection">
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a class="projectsLink" href="#">Projects</a></li>
+                        <li><a class="aboutLink" href="#">About</a></li>
+                        <li><a class="contactLink" href="#contact">Contact</a></li>
                         <li><a href="images/LyamTorres-resume.pdf" target="_blank">Resume</a></li>
                     </ol>
                 </div>
@@ -35,55 +36,51 @@
     </header>
     <section class="hero">
         <div class="container">
-            <h1 class="intro">
-                    Hello there, I'm Lyam</br>
-                    A <strong>Front-End Developer</strong> who wants to help</br>
-                    you create the ultimate version of your <strong>website</strong>.
+            <h1 class="intro" data-aos="fade-up" data-aos-duration="2000">
+                    Hello there! I'm Lyam,</br>
+                    a <strong>Front-End Web Developer</strong> passionate about</br>
+                    developing<strong> useful and engaging</strong> websites for people
             </h1>
         </div>
     </section>
     <section class="projects" id="projects">
         <div class="container">
             <figure>
-                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
+                <a href="https://github.com/lyamtorres/chess-online" class="project-selection" target="_blank">
+                    <div class="project-selection chess-online" id="project-selection" data-aos="fade-up" data-aos-duration="2000">Chess Online</div>
+                </a>
             </figure>
             <figure>
-                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
+                <a href="https://github.com/lyamtorres/amazon-viewer" class="project-selection" target="_blank">
+                    <div class="project-selection amazon-viewer" id="project-selection" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">Amazon Viewer</div>
+                </a>
             </figure>
             <figure>
-                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
-            </figure>
-            <figure>
-                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
-            </figure>
-            <figure>
-                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
-            </figure>
-            <figure>
-                <a href="javascript:void(0)"><div class="project-selection" id="project-selection">Coming Soon</div></a>
+                <a href="javascript:void(0)" class="project-selection">
+                    <div class="project-selection coming-soon" id="project-selection" data-aos="fade-up" data-aos-duration="2000">Coming Soon</div>
+                </a>
             </figure>
         </div>
     </section>
     <section class="about" id="about">
         <div class="container">
-                <div class= "box-sample">
-                        <h2>Learn About Me</h2>
-                        <h3>Where am I right now in my carrer?</h3>
+                <div class= "box-sample" data-aos="fade-up" data-aos-duration="2000">
+                        <h2>About Me</h2>
+                        <h3>Learn some facts about me 🚀 </h3>
                         <hr>
                     </div>
             <figure>
-                <img src="images/profile.png" class="profile-picture">
+                <img src="images/profile.png" class="profile-picture" data-aos="fade-up" data-aos-duration="2000">
             </figure>
-            <div class="biography">
+            <div class="biography" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
                 
-                <p> I'm a Front-End Developer born in Nicaragua, a not very well known country located
-                    in Central America (an extremely hot country by the way 🥵).
-                    I can say that I'm very passionate about discovering new technologies
-                    since very young and my goal is to contribute creating the future of technology
-                    with my skill set. <br>
+                <p> I'm a Web Developer born and raised in Nicaragua, a not very well known country located
+                    in Central America. Passionate about technology since very young, I enjoy spending my time learning
+                    new programming languages, frameworks or tools in order to test my knowledge everyday and improve it even further.
+                    I have skills that allow me to create fun and interactive experiences for users. </br></br>
                     Living in France since 2016, right now I'm pursuing my Licentiate in Computer Science
-                    at Nantes University. And in my free time, I enjoy practising Taekwon-Do, creating Instagram Stories
-                    and reading Science Fiction.
+                    at Nantes University. But when I'm not studying, I enjoy practising Taekwon-Do and uploading
+                    short films on Instagram.
                     </p> 
                 </p>
             </div>
@@ -91,13 +88,13 @@
     </section>
     <section class="skill">
         <div class="container">
-            <div class= "box-sample">
+            <div class= "box-sample" data-aos="fade-up" data-aos-duration="2000">
                 <h2 class="skill-title">My Skill Set</h2>
-                <h3>Some of the tools I use in my day to day work</h3>
+                <h3>The tools I use in my daily work 💻 </h3>
                 <hr>
             </div>
             <div class="flexbox">
-                <div class="box">
+                <div class="box" data-aos="fade-up" data-aos-duration="2000">
                     <img src="images/frontend.png" class="skill-icon" alt="">
                     <h4>Front-End</h4>
                     <ol>
@@ -106,7 +103,7 @@
                         <li>JavaScript</li>
                     </ol>
                 </div>
-                <div class="box">
+                <div class="box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
                     <img src="images/backend.png" class="skill-icon" alt="">
                     <h4>Back-End</h4>
                     <ol>
@@ -115,7 +112,7 @@
                         <li>MySQL</li>
                     </ol>
                 </div>
-                <div class="box">
+                <div class="box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="350">
                     <img src="images/other.png" class="skill-icon" alt="">
                     <h4>Other</h4>
                     <ol>
@@ -129,32 +126,33 @@
     </section>
     <section class="contact" id="contact">
         <div class="container">
-            <div class= "box-sample">
+            <div class= "box-sample" data-aos="fade-up" data-aos-duration="2000">
                 <h2>Contact Me</h2>
-                <h3>And let's create the web together!</h3>
+                <h3>Let's create the future of the web together 😄 </h3>
                 <hr>
+            </div>
             <div class= "box-sample"></div>
             <div class="flexbox">
                 <a href="https://www.linkedin.com/in/lyam-torres-967270169/" class="linkedin" target="_blank">
-                    <div class="box">
+                    <div class="box" data-aos="fade-up" data-aos-duration="2000">
                         <i class="icon-linkedin social"></i>
                         <h4>LinkedIn</h4>
                     </div>
                 </a>
                 <a href="https://github.com/lyamtorres" class="github" target="_blank">
-                    <div class="box">
+                    <div class="box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
                         <i class="icon-github social"></i>
                         <h4>Github</h4>
                     </div>
                 </a>
                 <a href="https://www.instagram.com/lyamtorres/" class="instagram" target="_blank">
-                    <div class="box">
+                    <div class="box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="350">
                         <i class="icon-instagram social"></i>
                         <h4>Instagram</h4>
                     </div>
                 </a>
                 <a href=mailto:lyamscott@hotmail.com class="envelop" target="_blank">
-                    <div class="box">
+                    <div class="box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
                         <i class="icon-envelop social"></i>
                         <h4>Mail</h4>
                     </div>
@@ -167,5 +165,13 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 200,
+        duration: 1000, 
+        once: true
+    });
+  </script>
 </body>
 </html>

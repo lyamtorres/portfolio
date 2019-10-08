@@ -61,16 +61,3 @@
 .project-selection:hover {
   transform: scale(1.05);
 }
-
-/*
-.intro {
-    position: relative;
-    animation-name: slide-down;
-    animation-duration: 1.5s;
-}
-*/
-
-@keyframes slide-down {
-    0% {top: 25%; opacity: 0;}
-    100%{top: 0; opacity: 100;}
-}
