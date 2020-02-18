@@ -1,5 +1,8 @@
 # Portfolio
-This is my personal website. The objective behind this project was to create a site where enterprises and recruiters could find all the information they need in one place. Also because it was a fun project to do.
+This is my personal website, a place where you can find a selection of my best projects as a software developer.
+
+## Website domain:
+https://lyamtorres.com/
 
 ## What I learned:
 * Solid understanding of Flexbox
