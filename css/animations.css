@@ -28,7 +28,7 @@
 }
 
 .logo a:hover { 
-  color: var(--secondary-color);
+  color: #00A3E9;
 }
 
 .contact a {
@@ -53,11 +53,13 @@
     color: #4386FA;
 }
 
-.project-selection, .project-logo {
+.project-logo {
   animation-name: zoom-effect;
   transition-duration: .5s;
 }
 
-.project-selection, .project-logo:hover {
+figure:hover > .project-logo,
+.project-logo:hover {
   transform: scale(1.10);
 }
+
