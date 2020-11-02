@@ -502,3 +502,40 @@ footer {
   }
 
 }
+
+
+
+/* animations.css */
+
+.header {
+  transition: top 0.3s;
+  opacity: 0.9;
+}
+
+.menu {
+  transition: .3s;
+}
+
+.header ol a {
+  color: #AAA9B2; 
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.header ol a:hover {
+  color:  #FFFFFF;
+}
+
+.burger-button:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.project-logo {
+  animation-name: zoom-effect;
+  transition-duration: .5s;
+}
+
+figure:hover > .project-logo,
+.project-logo:hover {
+  transform: scale(1.10);
+}
