@@ -21,38 +21,6 @@
   background-color: rgba(0, 0, 0, 1);
 }
 
-.logo a {
-  color: #FFFFFF;
-  animation-name: coloration;
-  transition-duration: .5s;
-}
-
-.logo a:hover { 
-  color: #00A3E9;
-}
-
-.contact a {
-    color: #373737;
-    animation-name: coloration;
-    transition-duration: .5s;
-}
-
-.contact .linkedin:hover {
-    color: #0073B1;
-}
-
-.contact .github:hover {
-    color: #000000;
-}
-
-.contact .instagram:hover {
-    color: #E3304E;
-}
-
-.contact .envelop:hover {
-    color: #4386FA;
-}
-
 .project-logo {
   animation-name: zoom-effect;
   transition-duration: .5s;
