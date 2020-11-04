@@ -1,3 +1,64 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?nx6hcm');
+  src:  url('../fonts/icomoon.eot?nx6hcm#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?nx6hcm') format('truetype'),
+    url('../fonts/icomoon.woff?nx6hcm') format('woff'),
+    url('../fonts/icomoon.svg?nx6hcm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-camera:before {
+  content: "\e90f";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-database:before {
+  content: "\e964";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-terminal:before {
+  content: "\ea81";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
+:root {
+  --primary-color: #333333;
+  --secondary-color: #00C2E0;
+}
 
             /*
 
@@ -5,65 +66,41 @@
               
             */
 
-:root {
-  --primary-color: #00A3E9;
-  --secondary-color: #898896;
-}
-
-
 html,body {
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
-  background-color: #E9EBED;
+}
+
+strong {
+  color: var(--secondary-color);
+  font-weight: 400;
 }
 
 h2, h3, h4, p {
   margin: 0;
-  margin-bottom: 2rem;
 }
  
 h2 {
-  font-size: 2.369rem;
+  margin-bottom: 2rem;
+  color: #00A3E9;
+  font-size: 1.953rem;
   font-weight: 600;
-  color: var(--primary-color);
   text-align: center;
 }
 
 h3 {
-  font-size: 1.777rem;
-  font-weight: 500;
+  margin-bottom: 0rem;
+  font-size: 1.563rem;
   text-align: center;
   
 }
 
 h4 {
-  font-size: 1.333rem;
+  margin: 2rem 0;
   color: #000000;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-button {
-  width: 6.5rem;
-  height: 3rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-  color: #FFFFFF;
-  background-color: var(--primary-color);
-  border-style: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-button:hover {
-  background-color: #1FBCFF;
+  font-size: 1.25rem;
 }
 
 hr {
@@ -71,31 +108,21 @@ hr {
   margin-bottom: 5rem;
   width: 8rem;
   height: 3px;
-  background-color: var(--primary-color);
+  background-color: #00A3E9;
   font-weight: bolder;
   border: none;
 }
 
-a {
-  text-decoration: none;
-}
-
-strong {
-  font-weight: 500;
-  color: var(--primary-color);
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
 }
 
 figure {
   margin: 0;
   width: 48%;
 } 
-
-footer {
-  height: 5rem;
-  background-color: #333333;
-  display: flex;
-  justify-content: center;
-}
 
 .container {
   margin: 0 auto;
@@ -110,11 +137,6 @@ footer {
   
 }
 
-.box-sample {
-  width: 100%;
-}
-
-
             /*
 
               || Header Styles
@@ -122,9 +144,9 @@ footer {
             */
 
 .header {
+  background-color: var(--primary-color);
   width: 100%;
   height: 6rem;
-  background-color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,10 +167,6 @@ footer {
   font-size: 1.5rem;
   font-weight: bold;
   font-style: italic;
-}
-
-.logo a {
-  color: #FFFFFF;
 }
 
 .menu {
@@ -204,44 +222,27 @@ footer {
 
 #landing {
   height: 100vh;
+  background-color: var(--primary-color);
+  background-image: url(../images/wave.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
   display: flex;
   flex-wrap: wrap;
-  background-image: url(/images/freelancer.svg);
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: center;
 }
 
 #landing h2 {
+  color: #FFFFFF;
   text-align: left;
-  color: #333333;
 }
 
 #landing p {
+  color: #FFFFFF;
   font-size: 1.563rem;
-  font-weight: 500;
-  color: var(--secondary-color);
+  font-weight: 400;
 }
 
-#landing-content {
-  margin-top: 6rem;
-  display: flex;
-}
-
-.social-icon {
-  width: 30px;
-  height: 30px;
-  padding-right: 1rem;
-  fill: var(--secondary-color);
-  transition: all 0.3s ease 0s;
-}
-
-#linkedin-icon:hover {
-  fill: #0E76A8;
-}
-
-#github-icon:hover {
-  fill: #000000;
+#landing svg {
+  width: 100%;
 }
 
 
@@ -253,7 +254,11 @@ footer {
 
 #projects {
   height: auto;
-  padding: 3rem 0;
+  padding: 4rem 0;
+  background-color: #EBEBEB;
+  background-image: url(../images/wave-reversed.svg);
+  background-repeat: no-repeat;
+  background-position-y: top;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -308,19 +313,81 @@ footer {
               
             */
 
-#about {
-  height: auto;
-  padding: 4rem 0;
+.about {
   background-color: #F5F5F5;
+  height: auto;
+  padding: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about figure {
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 23rem;
+  height: 23rem;
+  border-radius: 100%;
+}
+
+.biography {
+  width: 48%;
+  height: auto;
+}
+
+/* Skills Section */
+
+.skill {
+  background-color: #E4E2E2;
+  height: auto;
+  padding: 6rem 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-#biography {
-  width: 50%;
+.box-sample {
+  width: 100%;
+}
+
+.flexbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  padding: 0 3rem;
+  width: 33.33333333333333%;
   height: auto;
   text-align: center;
+}
+
+.skill-icon {
+  padding-top: 2rem;
+}
+
+.skill ol {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.skill ol li {
+  font-size: 1rem;
+  line-height: 3rem;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+
+.skill img {
+  padding: 0;
 }
 
 /* Contact section */
@@ -342,18 +409,83 @@ footer {
   font-size: 4.375rem;
 }
 
-
-
 .contact a {
   color: black;
   text-decoration: none;
 }
 
-.box {
-  padding: 0 3rem;
-  width: 33.33333333333333%;
-  height: auto;
-  text-align: center;
+footer {
+  height: 5rem;
+  background-color: #373737;
+  display: flex;
+  justify-content: center;
+}
+
+/* Animations */
+
+.header {
+  transition: top 0.3s;
+  opacity: 0.9;
+}
+
+.menu {
+  transition: .3s;
+}
+
+.header ol a {
+  color: #AAA9B2; 
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.header ol a:hover {
+  color:  #FFFFFF;
+}
+
+.burger-button:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.logo a {
+  color: #FFFFFF;
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.logo a:hover { 
+  color: #00A3E9;
+}
+
+.contact a {
+    color: #373737;
+    animation-name: coloration;
+    transition-duration: .5s;
+}
+
+.contact .linkedin:hover {
+    color: #0073B1;
+}
+
+.contact .github:hover {
+    color: #000000;
+}
+
+.contact .instagram:hover {
+    color: #E3304E;
+}
+
+.contact .envelop:hover {
+    color: #4386FA;
+}
+
+.project-logo {
+  animation-name: zoom-effect;
+  transition-duration: .5s;
+}
+
+figure:hover > .project-logo,
+.project-logo:hover {
+  transform: scale(1.10);
 }
 
 
@@ -439,7 +571,7 @@ footer {
     height: 22rem;
   }
 
-  #about figure {
+  .about figure {
     height: 22rem;
   }
 
@@ -448,7 +580,7 @@ footer {
     height: 22rem;
   }
 
-  #biography {
+  .biography {
     width: 98%;
   }
 
@@ -471,11 +603,11 @@ footer {
     width: initial;
   }
 
-  #about figure {
+  .about figure {
     margin-top: 4rem;
   }
 
-  #biography {
+  .biography {
     margin-top: 4rem;
   }
 
@@ -492,7 +624,7 @@ footer {
     height: 16rem;
   }
 
-  #about figure {
+  .about figure {
     height: 16rem;
   }
 
@@ -501,41 +633,4 @@ footer {
     height: 16rem;
   }
 
-}
-
-
-
-/* animations.css */
-
-.header {
-  transition: top 0.3s;
-  opacity: 0.9;
-}
-
-.menu {
-  transition: .3s;
-}
-
-.header ol a {
-  color: #AAA9B2; 
-  animation-name: coloration;
-  transition-duration: .5s;
-}
-
-.header ol a:hover {
-  color:  #FFFFFF;
-}
-
-.burger-button:hover {
-  background-color: rgba(0, 0, 0, 1);
-}
-
-.project-logo {
-  animation-name: zoom-effect;
-  transition-duration: .5s;
-}
-
-figure:hover > .project-logo,
-.project-logo:hover {
-  transform: scale(1.10);
 }
