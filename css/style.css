@@ -1,63 +1,14 @@
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?nx6hcm');
-  src:  url('../fonts/icomoon.eot?nx6hcm#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?nx6hcm') format('truetype'),
-    url('../fonts/icomoon.woff?nx6hcm') format('woff'),
-    url('../fonts/icomoon.svg?nx6hcm#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-camera:before {
-  content: "\e90f";
-}
-.icon-envelop:before {
-  content: "\e945";
-}
-.icon-display:before {
-  content: "\e956";
-}
-.icon-mobile:before {
-  content: "\e958";
-}
-.icon-database:before {
-  content: "\e964";
-}
-.icon-menu:before {
-  content: "\e9bd";
-}
-.icon-terminal:before {
-  content: "\ea81";
-}
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-github:before {
-  content: "\eab0";
-}
-.icon-linkedin:before {
-  content: "\eac9";
-}
 
 :root {
-  --primary-color: #333333;
-  --secondary-color: #00C2E0;
+  --primary-color: #333333; /* Jet */
+  --secondary-color: #00A3E9; /* Carolina Blue */
+  --terciary-color: #EBEBEB; /* Platinum */
+  --quaternary-color: #F5F5F5; /* Cultured */
+
+  --large-font-size: 1.953rem;
+  --medium-font-size: 1.563rem;
+  --small-font-size: 1.25rem;
+  --base-font-size: 1rem;
 }
 
             /*
@@ -78,49 +29,43 @@ strong {
   font-weight: 400;
 }
 
-h2, h3, h4, p {
-  margin: 0;
-}
- 
-h2 {
-  margin-bottom: 2rem;
-  color: #00A3E9;
-  font-size: 1.953rem;
-  font-weight: 600;
-  text-align: center;
+h2, h4, p {
+  margin: 0 0 1.5rem 0;
 }
 
-h3 {
-  margin-bottom: 0rem;
-  font-size: 1.563rem;
-  text-align: center;
-  
+h2 {
+  font-size: var(--large-font-size);
+  font-weight: 600;
+  color: #FFFFFF;
 }
 
 h4 {
-  margin: 2rem 0;
-  color: #000000;
-  font-size: 1.25rem;
-}
-
-hr {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  width: 8rem;
-  height: 3px;
-  background-color: #00A3E9;
-  font-weight: bolder;
-  border: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--primary-color);
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  width: 6rem;
+  height: 3px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: var(--secondary-color);
+  border: none;
 }
 
 figure {
-  margin: 0;
+  margin: 0 0 1.75rem 0;
   width: 48%;
 } 
 
@@ -133,8 +78,31 @@ figure {
   display: inherit;
   justify-content: inherit;
   align-items: center;
-  flex-wrap: inherit;
-  
+  flex-wrap: inherit; 
+}
+
+.subtitle {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.box-sample p {
+  font-size: var(--medium-font-size);
+  font-weight: 400;
+  text-align: center;
+}
+
+footer {
+  height: 5rem;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 300;
+  color: #FFFFFF;
 }
 
             /*
@@ -223,28 +191,18 @@ figure {
 #landing {
   height: 100vh;
   background-color: var(--primary-color);
-  background-image: url(../images/wave.svg);
-  background-repeat: no-repeat;
-  background-position-y: bottom;
   display: flex;
-  flex-wrap: wrap;
 }
 
 #landing h2 {
-  color: #FFFFFF;
-  text-align: left;
+  margin-top: 6rem;
 }
 
 #landing p {
-  color: #FFFFFF;
-  font-size: 1.563rem;
+  font-size: var(--medium-font-size);
   font-weight: 400;
+  color: #FFFFFF;
 }
-
-#landing svg {
-  width: 100%;
-}
-
 
             /*
 
@@ -254,22 +212,41 @@ figure {
 
 #projects {
   height: auto;
-  padding: 4rem 0;
-  background-color: #EBEBEB;
-  background-image: url(../images/wave-reversed.svg);
-  background-repeat: no-repeat;
-  background-position-y: top;
+  padding: 3rem 0;
+  background-color: var(--terciary-color);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  
+  flex-wrap: wrap;
+}
+
+#projects a {
+  width: 100%;
+}
+
+#projects figure {
+  width: inherit;
+  height: 20rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sushiito-restaurant {
+  background-color: #000000;
+}
+
+#sushiito-restaurant h4 {
+  color: #FFFFFF;
+} 
+
+#antkd-itf {
+  background-color: #FFFFFF;
 }
 
 .project-box {
   width: 46%;
   height: inherit;
-  margin: 0 0;
-  border-radius: .5rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -278,33 +255,8 @@ figure {
   margin-bottom: 0.5rem;
 }
 
-.projects p {
+.project-box p {
   color: #7F7D8C;
-}
-
-#projects a {
-  width: 100%;
-}
-
-#projects a figure {
-  width: inherit;
-  height: 20rem;
-  border-radius: .5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#projects #sushiito-restaurant h4 {
-  color: #FFFFFF;
-} 
-
-#antkd-itf {
-  background-color: #FFFFFF;
-}
-
-#sushiito-restaurant {
-  background-color: #000000;
 }
 
             /*
@@ -314,9 +266,9 @@ figure {
             */
 
 .about {
-  background-color: #F5F5F5;
+  background-color: var(--quaternary-color);
   height: auto;
-  padding: 6rem 0;
+  padding: 3rem 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -343,7 +295,7 @@ figure {
 /* Skills Section */
 
 .skill {
-  background-color: #E4E2E2;
+  background-color: var(--terciary-color);
   height: auto;
   padding: 6rem 0;
   display: flex;
@@ -353,19 +305,6 @@ figure {
 
 .box-sample {
   width: 100%;
-}
-
-.flexbox {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.box {
-  padding: 0 3rem;
-  width: 33.33333333333333%;
-  height: auto;
-  text-align: center;
 }
 
 .skill-icon {
@@ -390,35 +329,64 @@ figure {
   padding: 0;
 }
 
-/* Contact section */
+            /*
 
-.contact {
-  padding: 6rem 0;
+              || Contact Section Styles
+              
+            */
+
+#contact {
+  padding: 3rem 0;
   height: auto;
-  background-color: #EBE9E9;
+  background-color: var(--terciary-color);
   display: flex;
   justify-content: center;
   flex-wrap: wrap; 
 }
 
-.contact .box {
-  width: 12vw;
+#contact .container {
+  flex-direction: column;
 }
 
-.social {
-  font-size: 4.375rem;
+#message-box {
+  width: inherit;
+  margin-bottom: 3rem;
+  display: inherit;
 }
 
-.contact a {
-  color: black;
-  text-decoration: none;
+#message-box a {
+  font-size: var(--medium-font-size);
+  text-decoration: underline;
 }
 
-footer {
+#message-box a:hover {
+  color: var(--secondary-color);
+}
+
+#social-box a {
+  width: 5rem;
   height: 5rem;
-  background-color: #373737;
-  display: flex;
-  justify-content: center;
+}
+
+.social-media {
+  width: inherit;
+  height: inherit;
+  margin: 0 3rem;
+  fill: var(--primary-color);
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+#linkedin-logo:hover {
+  fill: #0073b1;
+}
+
+#github-logo:hover {
+  fill: #000000;
+}
+
+#youtube-logo:hover {
+  fill: #ff0000;
 }
 
 /* Animations */
@@ -460,22 +428,6 @@ footer {
     color: #373737;
     animation-name: coloration;
     transition-duration: .5s;
-}
-
-.contact .linkedin:hover {
-    color: #0073B1;
-}
-
-.contact .github:hover {
-    color: #000000;
-}
-
-.contact .instagram:hover {
-    color: #E3304E;
-}
-
-.contact .envelop:hover {
-    color: #4386FA;
 }
 
 .project-logo {
@@ -584,19 +536,10 @@ figure:hover > .project-logo,
     width: 98%;
   }
 
-  .flexbox {
+  .social-box {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .box {
-    margin-top: 4rem;
-    width: auto;
-  }
-
-  hr {
-    margin-bottom: 3rem;
   }
 
   .contact .box {
