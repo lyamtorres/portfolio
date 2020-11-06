@@ -3,7 +3,7 @@
   --primary-color: #333333; /* Jet */
   --secondary-color: #00A3E9; /* Carolina Blue */
   --terciary-color: #EBEBEB; /* Platinum */
-  --quaternary-color: #F5F5F5; /* Cultured */
+  --quaternary-color: #00C2E0; /* Vivid Sky Blue */
 
   --large-font-size: 1.953rem;
   --medium-font-size: 1.563rem;
@@ -25,8 +25,8 @@ html,body {
 }
 
 strong {
-  color: var(--secondary-color);
   font-weight: 400;
+  color: var(--quaternary-color);
 }
 
 h2, h4, p {
@@ -86,6 +86,10 @@ figure {
   text-align: center;
 }
 
+.box-sample {
+  width: 100%;
+}
+
 .box-sample p {
   font-size: var(--medium-font-size);
   font-weight: 400;
@@ -121,6 +125,8 @@ footer p {
   flex-wrap: wrap;
   position: fixed;
   z-index: 1;
+  transition: top 0.3s;
+  opacity: 0.9;
 }
 
 .header nav {
@@ -130,11 +136,40 @@ footer p {
   justify-content: inherit;
 }
 
+.header ol a {
+  color: #AAA9B2; 
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.header ol a:hover {
+  color:  #FFFFFF;
+}
+
+.menu {
+  transition: .3s;
+}
+
+.burger-button:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
 .logo {
   height: inherit;
   font-size: 1.5rem;
   font-weight: bold;
   font-style: italic;
+}
+
+
+.logo a {
+  color: #FFFFFF;
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.logo a:hover { 
+  color: #00A3E9;
 }
 
 .menu {
@@ -204,6 +239,19 @@ footer p {
   color: #FFFFFF;
 }
 
+.social-media {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 1.25rem;
+  fill:#7F7D8C;
+  animation-name: coloration;
+  transition-duration: .5s;
+}
+
+.social-media:hover {
+  fill: var(--terciary-color);
+}
+
             /*
 
               || Projects Section Styles
@@ -244,6 +292,16 @@ footer p {
   background-color: #FFFFFF;
 }
 
+.project-logo {
+  animation-name: zoom-effect;
+  transition-duration: .5s;
+}
+
+figure:hover > .project-logo,
+.project-logo:hover {
+  transform: scale(1.10);
+}
+
 .project-box {
   width: 46%;
   height: inherit;
@@ -265,181 +323,56 @@ footer p {
               
             */
 
-.about {
-  background-color: var(--quaternary-color);
+#about {
   height: auto;
   padding: 3rem 0;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.about figure {
+#about h2 {
+  color: var(--quaternary-color);
+}
+
+#about hr {
+  background-color: var(--quaternary-color);
+}
+
+#about figure {
   height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.profile-picture {
+#about p {
+  color: #FFFFFF;
+}
+
+#about .box-sample p {
+  font-weight: 500;
+}
+
+#photo-container img {
   width: 23rem;
   height: 23rem;
   border-radius: 100%;
 }
 
-.biography {
+#text-container {
   width: 48%;
   height: auto;
 }
 
-/* Skills Section */
 
-.skill {
-  background-color: var(--terciary-color);
-  height: auto;
-  padding: 6rem 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.box-sample {
-  width: 100%;
-}
-
-.skill-icon {
-  padding-top: 2rem;
-}
-
-.skill ol {
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0;
-}
-
-.skill ol li {
-  font-size: 1rem;
-  line-height: 3rem;
-  text-decoration: none;
-  list-style: none;
-  text-align: center;
-}
-
-.skill img {
-  padding: 0;
-}
 
             /*
 
-              || Contact Section Styles
+              || Responsive Design Styles
               
             */
-
-#contact {
-  padding: 3rem 0;
-  height: auto;
-  background-color: var(--terciary-color);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; 
-}
-
-#contact .container {
-  flex-direction: column;
-}
-
-#message-box {
-  width: inherit;
-  margin-bottom: 3rem;
-  display: inherit;
-}
-
-#message-box a {
-  font-size: var(--medium-font-size);
-  text-decoration: underline;
-}
-
-#message-box a:hover {
-  color: var(--secondary-color);
-}
-
-#social-box a {
-  width: 5rem;
-  height: 5rem;
-}
-
-.social-media {
-  width: inherit;
-  height: inherit;
-  margin: 0 3rem;
-  fill: var(--primary-color);
-  animation-name: coloration;
-  transition-duration: .5s;
-}
-
-#linkedin-logo:hover {
-  fill: #0073b1;
-}
-
-#github-logo:hover {
-  fill: #000000;
-}
-
-#youtube-logo:hover {
-  fill: #ff0000;
-}
-
-/* Animations */
-
-.header {
-  transition: top 0.3s;
-  opacity: 0.9;
-}
-
-.menu {
-  transition: .3s;
-}
-
-.header ol a {
-  color: #AAA9B2; 
-  animation-name: coloration;
-  transition-duration: .5s;
-}
-
-.header ol a:hover {
-  color:  #FFFFFF;
-}
-
-.burger-button:hover {
-  background-color: rgba(0, 0, 0, 1);
-}
-
-.logo a {
-  color: #FFFFFF;
-  animation-name: coloration;
-  transition-duration: .5s;
-}
-
-.logo a:hover { 
-  color: #00A3E9;
-}
-
-.contact a {
-    color: #373737;
-    animation-name: coloration;
-    transition-duration: .5s;
-}
-
-.project-logo {
-  animation-name: zoom-effect;
-  transition-duration: .5s;
-}
-
-figure:hover > .project-logo,
-.project-logo:hover {
-  transform: scale(1.10);
-}
-
 
 
 @media screen and (max-width: 1023px) {
@@ -534,16 +467,6 @@ figure:hover > .project-logo,
 
   .biography {
     width: 98%;
-  }
-
-  .social-box {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact .box {
-    width: initial;
   }
 
   .about figure {

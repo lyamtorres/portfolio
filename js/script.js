@@ -63,7 +63,9 @@ aboutLink.addEventListener('click', () => {
     smoothScroll('.about', 1000);
 });
 
+/*
 const contactLink = document.querySelector('.contact-link');
 contactLink.addEventListener('click', () => {
     smoothScroll('.contact', 1000);
 });
+*/
