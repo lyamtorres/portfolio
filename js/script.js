@@ -1,21 +1,27 @@
+// Funcionalidad del menu de hamburguesa
 const menu = document.querySelector('.menu');
-const burgerButton = document.querySelector('#burger-menu');
-const menuOptions = document.querySelector('.menu-selection'); 
+const menuBtn = document.querySelector('.menu-btn');
+const menuOptions = document.querySelector('.menu-options');
+let menuOpen = false;
 
-var hide = () => {
-    menu.classList.remove('is-active');
-};
-
-var hideShow = () => {
-    if (menu.classList.contains('is-active')) {
-        menu.classList.remove('is-active');
-    } else {
+menuBtn.addEventListener('click', () => {
+    if(menuOpen === false) {
         menu.classList.add('is-active');
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    } else {
+        menu.classList.remove('is-active');
+        menuBtn.classList.remove('open');
+        menuOpen = false;
     }
-};
+});
 
-burgerButton.addEventListener('click', hideShow);
-menuOptions.addEventListener('click', hide);
+menuOptions.addEventListener('click', () => {
+    menu.classList.remove('is-active');
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+});
+
 
 var prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
@@ -62,10 +68,3 @@ const aboutLink = document.querySelector('.about-link');
 aboutLink.addEventListener('click', () => {
     smoothScroll('.about', 1000);
 });
-
-/*
-const contactLink = document.querySelector('.contact-link');
-contactLink.addEventListener('click', () => {
-    smoothScroll('.contact', 1000);
-});
-*/

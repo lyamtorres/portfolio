@@ -69,6 +69,39 @@ figure {
   width: 48%;
 } 
 
+
+button {
+  width: 8rem;
+  height: 3rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  border-width: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  background-color: var(--quaternary-color);
+  cursor: pointer;
+  animation-name: colorful-stretching;
+  transition-duration: .5s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  width: 10rem;
+}
+
+footer {
+  height: auto;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 2rem;
@@ -97,37 +130,16 @@ figure {
   color: #000000;
 }
 
-button {
-  width: 8rem;
-  height: 3rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1rem;
-  border-width: 0;
-  border-radius: 12px;
-  color: #FFFFFF;
-  background-color: var(--quaternary-color);
-  cursor: pointer;
-  animation-name: colorful-stretching;
-  transition-duration: .5s;
+footer .container {
+  height: inherit;
+  flex-direction: column;
+  margin: 2rem 0;
 }
 
-button:hover {
-  background-color: var(--secondary-color);
-  width: 10rem;
+#social-box {
+  margin-bottom: 1rem;
 }
 
-footer {
-  height: 5rem;
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-}
-
-footer p {
-  margin: 0;
-  font-weight: 300;
-  color: #FFFFFF;
-}
 
             /*
 
@@ -156,7 +168,7 @@ header nav {
   justify-content: inherit;
 }
 
-header ol a {
+.menu-options a {
   color: #AAA9B2; 
   animation-name: coloration;
   transition-duration: .5s;
@@ -170,17 +182,12 @@ header ol a:hover {
   transition: .3s;
 }
 
-.burger-button:hover {
-  background-color: rgba(0, 0, 0, 1);
-}
-
 .logo {
   height: inherit;
   font-size: 1.5rem;
   font-weight: bold;
   font-style: italic;
 }
-
 
 .logo a {
   color: #FFFFFF;
@@ -189,21 +196,6 @@ header ol a:hover {
 .menu {
   height: inherit;
   display: inherit;
-}
-
-.burger-button {
-  width: 3.5rem;
-  height: 3.5rem;
-  color: #F6F6F6;
-  background-color: rgba(0, 0, 0, .5);
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  border-radius: 1.75rem;
-  display: none;
-  text-align: center;
-  position: absolute;
-  z-index: 1;
-  right: 2rem;
 }
 
 header ol {
@@ -281,20 +273,24 @@ header ol a {
   flex-wrap: wrap;
 }
 
-#projects .container {
+/* #projects .container {
   align-items: initial;
+} */
+
+#antkd-itf {
+  background-color: #B02B38;
 }
 
 #sushiito-restaurant {
-  background-color: #000000;
+  background-color: #2B7EA1;
 }
 
-#sushiito-restaurant h4 {
-  color: #FFFFFF;
-} 
+#online-chess {
+  background-color: #9A97C4;
+}
 
-#antkd-itf {
-  background-color: #FFFFFF;
+#break-tracker {
+  background-color: #8FBC94;
 }
 
 .project-logo {
@@ -302,16 +298,12 @@ header ol a {
   transition-duration: .5s;
 }
 
-figure:hover > .project-logo,
-.project-logo:hover {
-  transform: scale(1.10);
-}
-
 .project-box {
   width: 46%;
   height: inherit;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 
@@ -336,6 +328,18 @@ figure:hover > .project-logo,
 .project-box p {
   color: #7F7D8C;
 }
+
+#redirection-links button {
+  width: 6rem;
+  height: 2rem;
+  margin-right: .5rem;
+}
+
+figure:hover > .project-logo,
+.project-logo:hover {
+  transform: scale(1.10);
+}
+
 
             /*
 
@@ -381,8 +385,6 @@ figure:hover > .project-logo,
   width: 48%;
   height: auto;
 }
-
-
 
             /*
 
@@ -435,6 +437,7 @@ figure:hover > .project-logo,
 
   .logo {
     width: 100%;
+    margin-left: 2.5rem;
     display: flex;
     justify-content: center;
   }
@@ -442,7 +445,7 @@ figure:hover > .project-logo,
   .menu {
     width: 100vw;
     height: auto;
-    background: rgba(12, 159, 249, .9);
+    background: rgba(12, 159, 249, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -456,12 +459,12 @@ figure:hover > .project-logo,
     left: 0;
   }
 
-  .icon-menu {
-      display: block;
-  }
-
   figure {
     width: 98%;
+  }
+
+  .projects .container {
+    flex-direction: column;
   }
 
   .projects figure {
@@ -473,6 +476,29 @@ figure:hover > .project-logo,
     height: 22rem;
   }
 
+  .project-box {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  #sushiito-box {
+    margin-bottom: 0;
+  }
+
+  .about .container {
+    flex-direction: column;
+  }
+
+  #text-container {
+    width: 100%;
+  }
+
+  #photo-container {
+    padding-bottom: 2rem;
+  }
+
   .about figure {
     height: 22rem;
   }
@@ -482,18 +508,9 @@ figure:hover > .project-logo,
     height: 22rem;
   }
 
-  .biography {
-    width: 98%;
-  }
-
   .about figure {
     margin-top: 4rem;
   }
-
-  .biography {
-    margin-top: 4rem;
-  }
-
 } 
 
 @media screen and (max-width: 479px) {
