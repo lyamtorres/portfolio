@@ -174,7 +174,7 @@ header nav {
   transition-duration: .5s;
 }
 
-header ol a:hover {
+.menu-options a:hover {
   color:  #FFFFFF;
 }
 
@@ -431,17 +431,6 @@ figure:hover > .project-logo,
     text-align: center;
   }
 
-  header a {
-    justify-content: center;
-  }
-
-  .logo {
-    width: 100%;
-    margin-left: 2.5rem;
-    display: flex;
-    justify-content: center;
-  }
-
   .menu {
     width: 100vw;
     height: auto;
@@ -457,6 +446,20 @@ figure:hover > .project-logo,
 
   .menu.is-active {
     left: 0;
+  }
+
+  .menu-options a {
+    margin: 4rem 0;
+    font-size: var(--medium-font-size);
+    /* color: #FFFFFF; */
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    margin-left: 2.5rem;
+    display: flex;
+    justify-content: center;
   }
 
   figure {
@@ -480,7 +483,6 @@ figure:hover > .project-logo,
     width: 100%;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 2rem;
   }
 
   #sushiito-box {
@@ -493,6 +495,10 @@ figure:hover > .project-logo,
 
   #text-container {
     width: 100%;
+  }
+
+  #text-container p {
+    text-align: center;
   }
 
   #photo-container {
