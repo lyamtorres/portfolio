@@ -68,3 +68,9 @@ const aboutLink = document.querySelector('.about-link');
 aboutLink.addEventListener('click', () => {
     smoothScroll('.about', 1000);
 });
+
+// Dark Mode Toggle Functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+});

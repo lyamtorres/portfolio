@@ -1,14 +1,30 @@
-
 :root {
-  --primary-color: #333333; /* Jet */
-  --secondary-color: #00A3E9; /* Carolina Blue */
-  --terciary-color: #EBEBEB; /* Platinum */
-  --quaternary-color: #00C2E0; /* Vivid Sky Blue */
+  /* Light Mode Variables */
+  --background-color: #F9FAFB; /* Cultured */
+  --text-color: #111827; /* Eerie Black */
+  --strong-text-color: #0078D4; /* Vivid Sky Blue */
+  --hover-color: #00A3E9; /* Carolina Blue */
+
+  /* Dark Mode Variables */
+  --dark-background-color: #1E1E2E; /* Dark Gunmetal */
+  --dark-text-color: #E0E0E0; /* Platinum */
+  --dark-strong-text-color: #BB86FC; /* Amethyst */
+  --dark-hover-color: #3700B3; /* Persian Indigo */
+
+  /* Other Variables */
+  --background-color-b: #EBEBEB; /* Platinum */
 
   --large-font-size: 1.953rem;
   --medium-font-size: 1.563rem;
   --small-font-size: 1.25rem;
   --base-font-size: 1rem;
+}
+
+body.dark-mode {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+    --strong-text-color: var(--dark-strong-text-color);
+    --hover-color: var(--dark-hover-color);
 }
 
             /*
@@ -26,7 +42,7 @@ html,body {
 
 strong {
   font-weight: 400;
-  color: var(--quaternary-color);
+  color: var(--strong-text-color);
 }
 
 h2, h4, p {
@@ -36,7 +52,7 @@ h2, h4, p {
 h2 {
   font-size: var(--large-font-size);
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-color);;
 }
 
 h4 {
@@ -60,7 +76,7 @@ hr {
   height: 3px;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  background-color: var(--secondary-color);
+  background-color: var(--hover-color);
   border: none;
 }
 
@@ -78,14 +94,14 @@ button {
   border-width: 0;
   border-radius: 12px;
   color: #FFFFFF;
-  background-color: var(--quaternary-color);
+  background-color: var(--strong-text-color);
   cursor: pointer;
   animation-name: colorful-stretching;
   transition-duration: .5s;
 }
 
 button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--hover-color);
   width: 10rem;
 }
 
@@ -115,7 +131,7 @@ footer p {
 }
 
 .subtitle {
-  color: var(--secondary-color);
+  color: var(--hover-color);
   text-align: center;
 }
 
@@ -175,7 +191,7 @@ header nav {
 }
 
 .menu-options a:hover {
-  color:  #FFFFFF;
+  color: var(--text-color);
 }
 
 .menu {
@@ -190,7 +206,7 @@ header nav {
 }
 
 .logo a {
-  color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .menu {
@@ -231,7 +247,7 @@ header ol a {
 
 #landing {
   height: 100vh;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   display: flex;
 }
 
@@ -242,7 +258,7 @@ header ol a {
 #landing p {
   font-size: var(--medium-font-size);
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .social-media {
@@ -255,7 +271,7 @@ header ol a {
 }
 
 .social-media:hover {
-  fill: var(--terciary-color);
+  fill: var(--background-color-b);
 }
 
             /*
@@ -267,7 +283,7 @@ header ol a {
 #projects {
   height: auto;
   padding: 3rem 0;
-  background-color: var(--terciary-color);
+  background-color: var(--background-color-b);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -350,18 +366,18 @@ figure:hover > .project-logo,
 #about {
   height: auto;
   padding: 3rem 0;
-  background-color: var(--terciary-color);
+  background-color: var(--background-color-b);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 #about h2 {
-  color: var(--secondary-color);
+  color: var(--hover-color);
 }
 
 #about hr {
-  background-color: var(--secondary-color);
+  background-color: var(--hover-color);
 }
 
 #about figure {
@@ -384,6 +400,96 @@ figure:hover > .project-logo,
 #text-container {
   width: 48%;
   height: auto;
+}
+
+            /*
+
+              || Dark Mode Toggle Styles
+              
+            */
+
+.toggle-container {
+  display: flex;
+  height: 96px;
+  align-items: center;
+}
+
+.dark-toggle {
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+  margin-left: 0;
+  position: relative;
+  vertical-align: middle;
+}
+.dark-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.dark-toggle .slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(16,24,40,0.06);
+  transition: background .25s ease;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* thumb + icon area */
+.dark-toggle .slider::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--background-color);
+  box-shadow: 0 3px 8px rgba(15,23,42,0.12);
+  transition: transform .25s ease, background .25s ease;
+  z-index: 2;
+}
+
+/* sun / moon glyph */
+.dark-toggle .slider::after {
+  content: "☀";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--text-color);
+  transition: left .25s ease, color .25s ease, content .15s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* checked state (dark mode on) */
+.dark-toggle input:checked + .slider {
+  background: linear-gradient(90deg, rgba(0,0,0,0.08), rgba(0,0,0,0.02));
+  /* use the theme variables (they switch when body.dark-mode is active) */
+  background: linear-gradient(90deg, var(--strong-text-color), var(--hover-color));
+}
+.dark-toggle input:checked + .slider::before {
+  transform: translateX(24px);
+  background: var(--text-color);
+}
+.dark-toggle input:checked + .slider::after {
+  content: "🌙";
+  left: calc(100% - 24px);
+  color: var(--background-color);
+}
+
+/* focus styles */
+.dark-toggle input:focus + .slider {
+  box-shadow: 0 0 0 3px rgba(0,120,212,0.12);
+}
+
+/* small-screen spacing */
+@media (max-width: 767px) {
+  .dark-toggle { margin-left: .5rem; }
 }
 
             /*
