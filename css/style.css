@@ -94,10 +94,14 @@ button {
   border-width: 0;
   border-radius: 12px;
   color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.2);
   background-color: var(--strong-text-color);
   cursor: pointer;
   animation-name: colorful-stretching;
   transition-duration: .5s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button:hover {
@@ -162,6 +166,10 @@ footer .container {
               || Header Styles
               
             */
+
+#navbar {
+  background-color: var(--background-color);
+}
 
 header {
   background-color: var(--primary-color);
@@ -252,13 +260,49 @@ header ol a {
 }
 
 #landing h2 {
+  font-size: 48px;
   margin-top: 6rem;
+  
 }
 
 #landing p {
   font-size: var(--medium-font-size);
   font-weight: 400;
   color: var(--text-color);
+}
+
+#landing p {
+  line-height: 1.75;
+}
+
+#hero {
+  width: 10rem;
+  height: 10rem;
+}
+
+#role {
+  background: linear-gradient(to right, purple, pink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: text-gradient-animation 3s linear infinite;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+@keyframes text-gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .social-media {
