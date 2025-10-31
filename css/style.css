@@ -1,19 +1,22 @@
-:root {
-  /* Light Mode Variables */
-  --background-color: #F9FAFB; /* Cultured */
-  --text-color: #111827; /* Eerie Black */
-  --strong-text-color: #0078D4; /* Vivid Sky Blue */
-  --hover-color: #00A3E9; /* Carolina Blue */
+:root {  
+  /* Background */
+  --first-background-color: #F9FAFB;
+  --second-background-color: #E5E7EB;
+  --dark-first-background-color: #1E1E2E;
+  --dark-second-background-color: #2A2A3C;
 
-  /* Dark Mode Variables */
-  --dark-background-color: #1E1E2E; /* Dark Gunmetal */
-  --dark-text-color: #E0E0E0; /* Platinum */
-  --dark-strong-text-color: #BB86FC; /* Amethyst */
-  --dark-hover-color: #3700B3; /* Persian Indigo */
+  /* Text */
+  --text-color-default: #AAA9B2;
+  --text-color: #111827;
+  --strong-text-color: #0078D4;
+  --dark-text-color: #E0E0E0;
+  --dark-strong-text-color: #BB86FC;
 
-  /* Other Variables */
-  --background-color-b: #EBEBEB; /* Platinum */
+  /* Hover Effects */
+  --hover-color: #00A3E9;
+  --dark-hover-color: #3700B3;
 
+  /* Font Size */
   --large-font-size: 1.953rem;
   --medium-font-size: 1.563rem;
   --small-font-size: 1.25rem;
@@ -21,11 +24,13 @@
 }
 
 body.dark-mode {
-    --background-color: var(--dark-background-color);
+    --first-background-color: var(--dark-first-background-color);
+    --second-background-color: var(--dark-second-background-color);
     --text-color: var(--dark-text-color);
     --strong-text-color: var(--dark-strong-text-color);
     --hover-color: var(--dark-hover-color);
 }
+
 
             /*
 
@@ -40,31 +45,32 @@ html,body {
   font-size: 16px;
 }
 
-strong {
-  font-weight: 400;
+h2 {
+  font-size: var(--large-font-size);
+  font-weight: 600;
   color: var(--strong-text-color);
+}
+
+h4 {
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--text-color);
 }
 
 h2, h4, p {
   margin: 0 0 1.5rem 0;
 }
 
-h2 {
-  font-size: var(--large-font-size);
-  font-weight: 600;
-  color: var(--text-color);;
-}
-
-h4 {
-  font-size: var(--small-font-size);
-  font-weight: 500;
-  color: var(--primary-color);
+strong {
+  font-weight: 400;
+  color: var(--strong-text-color);
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 a {
@@ -76,7 +82,7 @@ hr {
   height: 3px;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  background-color: var(--hover-color);
+  background-color: var(--strong-text-color);
   border: none;
 }
 
@@ -111,7 +117,7 @@ button:hover {
 
 footer {
   height: auto;
-  background-color: var(--primary-color);
+  background-color: var(--second-background-color);
   display: flex;
   justify-content: center;
 }
@@ -119,7 +125,8 @@ footer {
 footer p {
   margin: 0;
   font-weight: 300;
-  color: #FFFFFF;
+  color: var(--text-color);
+  margin-top: 1rem
 }
 
 .container {
@@ -135,7 +142,6 @@ footer p {
 }
 
 .subtitle {
-  color: var(--hover-color);
   text-align: center;
 }
 
@@ -147,7 +153,6 @@ footer p {
   font-size: var(--medium-font-size);
   font-weight: 500;
   text-align: center;
-  color: #000000;
 }
 
 footer .container {
@@ -157,7 +162,7 @@ footer .container {
 }
 
 #social-box {
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
 }
 
 
@@ -168,7 +173,7 @@ footer .container {
             */
 
 #navbar {
-  background-color: var(--background-color);
+  background-color: var(--first-background-color);
 }
 
 header {
@@ -193,7 +198,7 @@ header nav {
 }
 
 .menu-options a {
-  color: #AAA9B2; 
+  color: var(--text-color-default); 
   animation-name: coloration;
   transition-duration: .5s;
 }
@@ -255,7 +260,7 @@ header ol a {
 
 #landing {
   height: 100vh;
-  background-color: var(--background-color);
+  background-color: var(--first-background-color);
   display: flex;
 }
 
@@ -309,13 +314,13 @@ header ol a {
   width: 1.75rem;
   height: 1.75rem;
   margin-right: 1.25rem;
-  fill:#7F7D8C;
+  fill: var(--text-color-default);
   animation-name: coloration;
   transition-duration: .5s;
 }
 
 .social-media:hover {
-  fill: var(--background-color-b);
+  fill: var(--text-color);
 }
 
             /*
@@ -327,15 +332,11 @@ header ol a {
 #projects {
   height: auto;
   padding: 3rem 0;
-  background-color: var(--background-color-b);
+  background-color: var(--second-background-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
-/* #projects .container {
-  align-items: initial;
-} */
 
 #antkd-itf {
   background-color: #B02B38;
@@ -385,10 +386,6 @@ header ol a {
   margin-bottom: .5rem;
 }
 
-.project-box p {
-  color: #7F7D8C;
-}
-
 .redirection-links button {
   width: 6rem;
   height: 2rem;
@@ -410,18 +407,10 @@ figure:hover > .project-logo,
 #about {
   height: auto;
   padding: 3rem 0;
-  background-color: var(--background-color-b);
+  background-color: var(--first-background-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-#about h2 {
-  color: var(--hover-color);
-}
-
-#about hr {
-  background-color: var(--hover-color);
 }
 
 #about figure {
@@ -490,7 +479,7 @@ figure:hover > .project-logo,
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--background-color);
+  background: var(--first-background-color);
   box-shadow: 0 3px 8px rgba(15,23,42,0.12);
   transition: transform .25s ease, background .25s ease;
   z-index: 2;
@@ -523,7 +512,7 @@ figure:hover > .project-logo,
 .dark-toggle input:checked + .slider::after {
   content: "🌙";
   left: calc(100% - 24px);
-  color: var(--background-color);
+  color: var(--first-background-color);
 }
 
 /* focus styles */
